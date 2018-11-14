@@ -1,5 +1,8 @@
-// get the API endpoint link, earthquakeDataURL
+// get the API endpoint link for 7 day report, earthquakeDataURL
 var earthquakeDataURL = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson";
+
+//get the API endpoint link for 1 day report, onedayDataURL
+var onedayDataURL = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson";
 
 // get the Tectonic plates link, 
 var tectonicplateDataURL = "https://raw.githubusercontent.com/fraxen/tectonicplates/master/GeoJSON/PB2002_boundaries.json"
@@ -25,13 +28,13 @@ d3.json(earthquakeDataURL, function(data) {
 });
 
 // define function to pull earthquake data for feature in the JSON
-function createFeatures(earthquakeData) {       
+function createFeatures(earthquakeData) {   
 
   // set up a GeoJSON layer containing the features array on the earthquakeData object
   // run the onEachFeature function for each piece of data in the array
   var earthquakes = L.geoJson(earthquakeData, {
     onEachFeature: function (feature, layer){
-      layer.bindPopup("<h3>" + feature.properties.title + "</h3><hr><p>" + new Date(feature.properties.time) + "</p>");
+      layer.bindPopup("<p id='magnitudePopUp'> <strong>Magnitude:</strong> " + feature.properties.mag + "</p> <hr> <p id='locationPopUp'> <b>Location:</b> " + feature.properties.place + "</p> <hr> <p id='datePopUp'> <strong>Date:</strong> " + new Date(feature.properties.time) + "</p>");
     },
     pointToLayer: function (feature, latlng) {
       return new L.circle(latlng,
@@ -121,7 +124,6 @@ function createMap(earthquakes) {
               '<i style="background:' + getColor(grades[i] + 1) + '"></i> ' +
               grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '<br>' : '+');
       }
-  
       return div;
   };
   // add legend to myMap
@@ -133,24 +135,17 @@ function createMap(earthquakes) {
 $(function () {
   $('.tlt').textillate({
       loop: true,
-      initialDelay: 20,
-      outEffects: [ 'hinge' ],
+      initialDelay: 50,
       in: {
-          effect: 'bounce',
-          delay: 50,
+          effect: 'shake',
+          delay: 10,
           shuffle: true,
-          
       },
       out: {
-          effect: 'fadeOutDownBig',
-          delay: 100,
+          effect: 'hinge',
+          delay: 50,
           shuffle: true
       }
   });
 });
 
-
-
-
-
-asdfasdfasd

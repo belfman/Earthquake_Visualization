@@ -34,6 +34,7 @@ html {
   opacity: 0.7;
 }
 
+/* Textillate styling */
 .tlt {
   text-align: center;
   font-family: sans-serif;
@@ -42,9 +43,33 @@ html {
   color: white;
 }
 
-p {
+/* mainParagrpah styling */
+.mainParagraph {
   color: lightblue;
   font-size: 20px;
-  padding: 10px;
-
+  padding: 20px;
 }
+
+/* Links styling*/
+a:link {
+  color: blue;
+}
+
+a:visited {
+  color: red;
+}
+
+/* PopUp text styling */
+#magnitudePopUp {
+  font-size: 20px;
+}
+
+#locationPopUp {
+  font-size: 15px;
+}
+
+#datePopUp {
+  color: black;
+}
+
+

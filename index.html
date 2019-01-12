@@ -24,17 +24,15 @@
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css">
 
+
 </head>
 
-<body>
-    <div class="jumbotron">
-        <div class="container">
-            <h1 class="tlt">Seven Day Earthquake Visualization</h1>
-            <p class="mainParagraph">The interactive map below shows earthquakes from the past 7 days, the information is provided by the <a href="https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php">United States Geological Survey (USGS)</a> and a link to the the geoJSON information can be found <a href="https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson">here</a>. There are three map layers to select from. The Satellite map shows the terrain to get a better view of the what the area around each earthquake looks like. The Street map shows a detailed view from country names to city names all the way down to street names and features names to get a detailed view of certain areas. The Pirate map is in there just for fun. According to <a href="https://en.wikipedia.org/wiki/Earthquake">Wikipedia</a> an earthquake is defined as "the shaking of the surface of the Earth, resulting from the sudden release of energy in the Earth's lithosphere that creates seismic waves." Most earthquakes are caused by activity along <a href="https://en.wikipedia.org/wiki/Fault_(geology)">fault lines</a>, but they can also be caused by volcanic activity, landslides etc. It is easy to see the correlation of fault lines and earthquake activity on this map with both the "7 Day Earthquake Report" and "Global Tectonic Plates" buttons selected from the layer control. 
-            </p>
-        </div>
-    </div>
+<body>  
+    <h1 class="tlt">Seven Day Earthquake Visualization</h1>
 
+    <p class="mainParagraph">The interactive map below shows earthquakes from the past 7 days, the information is provided by the <a href="https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php" target="_blank">United States Geological Survey (USGS)</a> and a link to the the geoJSON information can be found <a href="https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson" target="_blank">here</a>. There are three map layers to select from. The Satellite map shows the terrain to get a better view of the what the area around each earthquake looks like. The Street map shows a detailed view from country names to city names all the way down to street names and feature names. The Pirate map is in there just for fun. According to <a href="https://en.wikipedia.org/wiki/Earthquake" target="_blank">Wikipedia</a> an earthquake is defined as "the shaking of the surface of the Earth, resulting from the sudden release of energy in the Earth's lithosphere that creates seismic waves." Most earthquakes are caused by activity along <a href="https://en.wikipedia.org/wiki/Fault_(geology)" target="_blank">fault lines</a>, but they can also be caused by volcanic activity, landslides etc. It is easy to see the correlation of fault lines and earthquake activity on this map with both the "7 Day Earthquake Report" and "Global Tectonic Plates" buttons selected from the layer control.
+    The default map starts on North America, you can zoom out or scroll the map to view the entire global map. Background image <a href="http://www.sciencemag.org/news/2014/09/underwater-landslide-may-have-doubled-2011-japanese-tsunami" target="_blank">link</a></p>
+        
   <!-- the map goes here -->
   <div id="map"></div>
   
@@ -44,3 +42,7 @@
   <script type="text/javascript" src="static/js/logic.js"></script>
 </body>
 </html>
+
+<!-- to do next:
+make a layer of one day earthquake report
+have the title letters phase in after the hinge event-->

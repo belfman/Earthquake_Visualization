@@ -1,6 +1,6 @@
 /* background image */
 body {
-  background: url("../../images/EQDamage.jpg") center no-repeat fixed;
+  background: url("../../images/EQdamage.jpg") center no-repeat fixed;
   background-image: fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;

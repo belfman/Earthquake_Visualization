@@ -1,9 +1,7 @@
 /* background image */
 body {
-  background: url("../../images/eqDamage.jpg") center;
+  background: url("../../images/EQDamage.jpg") center no-repeat fixed;
   background-image: fixed;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
